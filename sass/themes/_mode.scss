@@ -1,0 +1,115 @@
+@use "../abstract" as *;
+.dark-mode {
+  background: $dark-mode;
+  header {
+    background-color: $dark-mode-for-elements;
+    .header__container {
+      h1 {
+        color: white;
+      }
+      .mode {
+        .mode-text {
+          color: white;
+        }
+        .switch {
+          input:checked + .slider {
+            background: #42434b !important;
+          }
+          input:checked + .slider:before {
+            background: #42434b !important;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    nav {
+      .nav__container {
+        .search {
+          .search-icon {
+            path {
+              fill: white !important;
+            }
+          }
+          input {
+            background-color: $dark-mode-for-elements;
+            color: white;
+            &::placeholder {
+              color: white;
+            }
+          }
+        }
+        .filter {
+          select {
+            background-color: $dark-mode-for-elements;
+            color: white;
+          }
+          &::after {
+            color: white;
+          }
+        }
+      }
+    }
+    #countries-row {
+      .container {
+        .row__container {
+          .card {
+            background-color: #374757;
+            * {
+              color: white !important
+              ;
+            }
+          }
+        }
+        .pagination {
+          ul {
+            li {
+              button {
+                background-color: #374757;
+                color: white;
+                &:hover {
+                  background-color: #4a6076;
+                }
+              }
+              .active {
+                background-color: #0051ff;
+              }
+            }
+          }
+        }
+      }
+    }
+    #country {
+      .country__container {
+        #back {
+          background: $dark-mode-for-elements;
+          box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+          color: white;
+          svg {
+            path {
+              fill: white;
+            }
+          }
+        }
+        .country-details {
+          .about {
+            * {
+              color: white !important;
+            }
+            .borders {
+              ul {
+                li {
+                  button {
+                    background: $dark-mode-for-elements;
+                    box-shadow: 0px 0px 4px 1px rgba(17, 21, 23, 0.25);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

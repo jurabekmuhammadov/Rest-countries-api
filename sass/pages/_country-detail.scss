@@ -1,0 +1,120 @@
+@use "../abstract" as *;
+main {
+  #country {
+    .country__container {
+      @include flexbox(column, start, start);
+      gap: 50px;
+      #back {
+        @include flexbox(row, center, center);
+        gap: 5px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: $text-color;
+        background: #fff;
+        box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+        cursor: pointer;
+        svg {
+          transition: 0.5s;
+          width: 18px;
+        }
+        &:hover {
+          svg {
+            transform: translateX(-5px);
+          }
+        }
+      }
+      .country-details {
+        @include flexbox(row, space-between, center);
+        gap: 100px;
+        .flag {
+          width: 550px;
+          img {
+            width: 100%;
+            border-radius: 10px;
+          }
+        }
+        .about {
+          @include flexbox(column, start, start);
+          gap: 20px;
+          .name {
+            @include heading(m);
+          }
+          .info {
+            @include grid(2, 5px);
+            li {
+              p {
+                @include text-bold(m);
+              }
+              span {
+                @include text(s);
+              }
+            }
+          }
+          .borders {
+            p {
+              @include text-bold(m);
+            }
+            @include flexbox(row, start, center);
+            gap: 40px;
+            ul {
+              @include flexbox(row, space-between, center);
+              gap: 20px;
+              li {
+                button {
+                  background: #fff;
+                  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.1);
+                  border-radius: 5px;
+                  padding: 0px 5px;
+                  border: none;
+                  @include text(s);
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include media(1030px) {
+        .country-details {
+          width: 100%;
+          @include flexbox(column, start, start);
+          gap: 40px;
+          .flag {
+            @include flexbox(row, center, center);
+            width: 100%;
+            img {
+              width: 500px;
+            }
+          }
+          .about {
+            .info {
+              @include flexbox(column, start, start);
+            }
+          }
+        }
+      }
+      @include media(500px) {
+        .country-details {
+          .flag {
+            img {
+              width: 100%;
+            }
+          }
+          .about {
+            .name {
+              font-size: 25px;
+            }
+            .borders {
+              gap: 10px;
+              flex-wrap: wrap;
+              ul {
+                gap: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

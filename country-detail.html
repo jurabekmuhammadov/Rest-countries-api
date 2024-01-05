@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Country Detail</title>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <span>Loading...</span>
+    </div>
+    <header id="header">
+      <div class="container header__container">
+        <h1>Where in the world?</h1>
+        <div class="mode">
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+          <span class="mode-text">Mode</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="country">
+        <div class="container country__container">
+          <a id="back" href="/index.html">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="call-made">
+                <path
+                  id="Shape"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.46447 4.10744L7.64298 5.28596L3.75389 9.17504L18.6031 9.17504L18.6031 10.825L3.75389 10.825L7.64298 14.714L6.46447 15.8926L0.57191 10L6.46447 4.10744Z"
+                  fill="#111517"
+                />
+              </g>
+            </svg>
+            Back
+          </a>
+          <div class="country-details"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/mode.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/getData.js"></script>
+    <script src="js/countryDetail.js"></script>
+  </body>
+</html>
